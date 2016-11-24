@@ -23,3 +23,5 @@ How to use a API with java, workshop with Robin at 10:30 in Room 12.019
 ## Domain
 
 ## ev3dev
+https://github.com/Zuehlke/robo-challenge
+https://github.com/disperate/robo-challenge-curver

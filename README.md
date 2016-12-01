@@ -23,8 +23,6 @@ https://github.com/Zuehlke/robo-challenge
 
 https://github.com/disperate/robo-challenge-curver
 
-## Azure Credits
-
 ## AWS Credits
 
 ## Domain

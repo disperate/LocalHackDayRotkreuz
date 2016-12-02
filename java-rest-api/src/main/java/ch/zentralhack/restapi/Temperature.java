@@ -1,4 +1,4 @@
-package ch.zentralhack.restapi;
+package main.java.ch.zentralhack.restapi;
 
 import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
@@ -9,44 +9,85 @@ public class Temperature {
 
     @SerializedName("min")
     @Expose
-    public Double min;
+    private Double min;
     @SerializedName("max")
     @Expose
-    public Double max;
+    private Double max;
     @SerializedName("average")
     @Expose
-    public Double average;
+    private Double average;
 
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public Temperature() {
+    }
+
+    /**
+     * 
+     * @param min
+     * @param max
+     * @param average
+     */
+    public Temperature(Double min, Double max, Double average) {
+        this.min = min;
+        this.max = max;
+        this.average = average;
+    }
+
+    /**
+     * 
+     * @return
+     *     The min
+     */
     public Double getMin() {
         return min;
     }
 
+    /**
+     * 
+     * @param min
+     *     The min
+     */
     public void setMin(Double min) {
         this.min = min;
     }
 
+    /**
+     * 
+     * @return
+     *     The max
+     */
     public Double getMax() {
         return max;
     }
 
+    /**
+     * 
+     * @param max
+     *     The max
+     */
     public void setMax(Double max) {
         this.max = max;
     }
 
+    /**
+     * 
+     * @return
+     *     The average
+     */
     public Double getAverage() {
         return average;
     }
 
+    /**
+     * 
+     * @param average
+     *     The average
+     */
     public void setAverage(Double average) {
         this.average = average;
     }
 
-    @Override
-    public String toString() {
-        return "ch.zentralhack.restapi.Temperature{" +
-                "min=" + min +
-                ", max=" + max +
-                ", average=" + average +
-                '}';
-    }
 }

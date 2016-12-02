@@ -1,4 +1,4 @@
-package ch.zentralhack.restapi;
+package main.java.ch.zentralhack.restapi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,32 +11,62 @@ public class Data {
 
     @SerializedName("datetime")
     @Expose
-    public List<String> datetime = new ArrayList<String>();
+    private List<String> datetime = new ArrayList<String>();
     @SerializedName("temperature")
     @Expose
-    public List<Double> temperature = new ArrayList<Double>();
+    private List<Double> temperature = new ArrayList<Double>();
 
-    @Override
-    public String toString() {
-        return "ch.zentralhack.restapi.Data{" +
-                "datetime=" + datetime +
-                ", temperature=" + temperature +
-                '}';
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public Data() {
     }
 
+    /**
+     * 
+     * @param datetime
+     * @param temperature
+     */
+    public Data(List<String> datetime, List<Double> temperature) {
+        this.datetime = datetime;
+        this.temperature = temperature;
+    }
+
+    /**
+     * 
+     * @return
+     *     The datetime
+     */
     public List<String> getDatetime() {
         return datetime;
     }
 
+    /**
+     * 
+     * @param datetime
+     *     The datetime
+     */
     public void setDatetime(List<String> datetime) {
         this.datetime = datetime;
     }
 
+    /**
+     * 
+     * @return
+     *     The temperature
+     */
     public List<Double> getTemperature() {
         return temperature;
     }
 
+    /**
+     * 
+     * @param temperature
+     *     The temperature
+     */
     public void setTemperature(List<Double> temperature) {
         this.temperature = temperature;
     }
+
 }

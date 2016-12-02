@@ -1,4 +1,4 @@
-package ch.zentralhack.restapi;
+package main.java.ch.zentralhack.restapi;
 
 import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
@@ -9,20 +9,39 @@ public class Metadata {
 
     @SerializedName("temperature")
     @Expose
-    public Temperature temperature;
+    private Temperature temperature;
 
-    @Override
-    public String toString() {
-        return "ch.zentralhack.restapi.Metadata{" +
-                "temperature=" + temperature +
-                '}';
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public Metadata() {
     }
 
+    /**
+     * 
+     * @param temperature
+     */
+    public Metadata(Temperature temperature) {
+        this.temperature = temperature;
+    }
+
+    /**
+     * 
+     * @return
+     *     The temperature
+     */
     public Temperature getTemperature() {
         return temperature;
     }
 
+    /**
+     * 
+     * @param temperature
+     *     The temperature
+     */
     public void setTemperature(Temperature temperature) {
         this.temperature = temperature;
     }
+
 }

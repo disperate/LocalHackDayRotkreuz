@@ -14,7 +14,7 @@
     webTarget.queryParam("from", "yesterday");
     webTarget.queryParam("to", "today");
     String response = webTarget.request().get(String.class);
-    System.out.println(response);
+    System.out.println("Raw response: " + response);
     ```
 - Parsing JSON to Java Objects
   - http://www.jsonschema2pojo.org/
@@ -22,12 +22,12 @@
 
   ```java
   Gson gson = new Gson();
-  AareArchive archive = gson.fromJson(response, AareArchive.class);
+  main.java.ch.zentralhack.restapi.AareArchive archive = gson.fromJson(response, main.java.ch.zentralhack.restapi.AareArchive.class);
   ```
 - Using the data
 
 ```java
-System.out.println(archive.getData().getTemperature();
+System.out.println("main.java.ch.zentralhack.restapi.Temperature data: " + archive.getData().getTemperature());
 
 System.out.println("Number of minutes < 8.5 degree Celsius: " +
         archive.getData().getTemperature().stream()

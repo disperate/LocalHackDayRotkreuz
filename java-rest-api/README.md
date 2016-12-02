@@ -2,9 +2,9 @@
 
 - What is a REST APIs
   - Application Programmable Interface
-  - Schnittstelle zwischen Programmen --> nicht für User gedacht
-  - Bsp. Webseite http://www.aare.guru/ für User, für Programme aber umständlich  
-  Lösung: http://aare.schwumm.ch/api/ --> http://aare.schwumm.ch/aare.json
+  - Interface between programs --> not for the user
+  - Ex. http://www.aare.guru/ for the user, not practical for programs  
+  Solution: http://aare.schwumm.ch/api/ --> http://aare.schwumm.ch/aare.json
 - Jersey
   - Simple GET with Parameters
 
@@ -27,13 +27,11 @@
 - Using the data
 
 ```java
-// get the list of temperatures
-System.out.println(archive.getData().getTemperature().toString());
+System.out.println(archive.getData().getTemperature();
 
-long coldCount = archive.getData().getTemperature().stream()
-        .filter(temperature -> temperature != null)
-        .filter(temperature -> temperature < 8.5)
-        .count();
-
-System.out.println(coldCount);
+System.out.println("Number of minutes < 8.5 degree Celsius: " +
+        archive.getData().getTemperature().stream()
+                .filter(temperature -> temperature != null && temperature < 8.5)
+                .count() * 10
+);
 ```

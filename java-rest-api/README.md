@@ -7,6 +7,7 @@
   Lösung: http://aare.schwumm.ch/api/ --> http://aare.schwumm.ch/aare.json
 - Jersey
   - Simple GET with Parameters
+
     ```java
     Client client = ClientBuilder.newClient();
     WebTarget webTarget = client.target("http://aare.schwumm.ch/api/archive");
@@ -18,11 +19,13 @@
 - Parsing JSON to Java Objects
   - http://www.jsonschema2pojo.org/
   - Gson
+
   ```java
   Gson gson = new Gson();
   AareArchive archive = gson.fromJson(response, AareArchive.class);
   ```
 - Using the data
+
 ```java
 // get the list of temperatures
 System.out.println(archive.getData().getTemperature().toString());
